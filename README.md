@@ -112,6 +112,13 @@ Erros seguem o formato `{ "erro": "mensagem explicativa" }`.
 
 ## Exemplo de uso (curl)
 
+> **Windows:** o `cmd` não aceita aspas simples em volta do JSON e, no PowerShell, `curl` é um alias de outro comando.
+> No `cmd`, use aspas duplas com escape; no PowerShell, use `curl.exe`; ou então use Git Bash, Postman ou Insomnia. Exemplo no `cmd`:
+>
+> ```
+> curl -X POST http://localhost:3000/motoristas -H "Content-Type: application/json" -d "{\"nome\":\"Maria Silva\"}"
+> ```
+
 ```bash
 # cadastra motorista e automóvel
 curl -s -X POST localhost:3000/motoristas  -H 'Content-Type: application/json' -d '{"nome":"Maria Silva"}'
